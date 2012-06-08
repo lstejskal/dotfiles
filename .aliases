@@ -1,0 +1,48 @@
+
+# general aliases, used in ubuntu 
+# loaded by .bashrc like this:
+# if [ -f ~/.aliases ]; then
+#   . ~/.aliases
+# fi
+
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias cls='clear'
+
+# TODO mplayer2
+alias mp='mplayer'
+alias mp3='mp *.mp3'
+
+alias rx='unrar x'
+alias unrar_all='find . -name "*.rar" -exec unrar x '{}' \;'
+alias unrar_all_part='find . -name "*.part1.rar" -exec unrar x '{}' \;'
+
+# edit aliases and load them right afterwards
+alias vialias='vi ~/.aliases; . ~/.aliases'
+
+# TODO detect rails2/3 and generate console/server command accordingly
+alias rc='rails console'
+alias rs='rails server'
+
+# git aliases. also see .gitconfig
+alias gs='git status'
+alias gd='git diff'
+alias gb='git branch'
+# very handy shortcuts! for example: GP master -f
+alias gp='git pull origin'
+alias GP='git push origin'
+alias gpm='git pull origin master'
+alias GPM='git push origin master'
+alias gpd='git pull origin deploy'
+alias GPD='git push origin deploy'
+# TODO shortcuts for git reset command
+
+alias b='bundle'
+alias be='bundle exec ruby'
+alias br='bundle exec rake'
+
+# aptitude
+# TODO find installed package by name
+count_packages='aptitude search ~i | wc -l'
