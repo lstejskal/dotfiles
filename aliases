@@ -30,7 +30,12 @@ alias rs='rails server'
 alias gs='git status'
 alias gd='git diff'
 alias gb='git branch'
-# very handy shortcuts! for example: GP master -f
+alias gl='git pull'
+alias gp='git push'
+alias gc='git commit'
+alias gca='git commit -a'
+alias gco='git checkout'
+
 alias gp='git pull origin'
 alias GP='git push origin'
 alias gpm='git pull origin master'
