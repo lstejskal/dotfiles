@@ -22,13 +22,11 @@ alias unrar_all_part='find . -name "*.part1.rar" -exec unrar x '{}' \;'
 # edit aliases and load them right afterwards
 alias vialias='vi ~/.aliases; . ~/.aliases'
 
-# TODO detect rails2/3 and generate console/server command accordingly
-alias rc='rails console'
-alias rs='rails server'
-
 # git aliases. also see .gitconfig
+alias g='git'
 alias gs='git status'
 alias gd='git diff'
+alias gdw='git diff -w'
 alias gb='git branch'
 alias gl='git pull'
 alias gp='git push'
@@ -44,9 +42,19 @@ alias gpd='git pull origin deploy'
 alias GPD='git push origin deploy'
 # TODO shortcuts for git reset command
 
+alias curl_post='curl -d "" '
+
+alias rv='ruby -v'
+
 alias b='bundle'
 alias be='bundle exec ruby'
 alias br='bundle exec rake'
+
+# TODO detect rails2/3 and generate console/server command accordingly
+alias rc='be script/console'
+alias rs='be script/ server'
+alias rc3='rails console'
+alias rs3='rails server'
 
 # aptitude
 # TODO find installed package by name
