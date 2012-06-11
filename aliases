@@ -1,9 +1,22 @@
 
-# general aliases, used in ubuntu 
-# loaded by .bashrc like this:
+# General aliases, used in ubuntu bash.
+# Loaded by ~/.bashrc  like this:
 # if [ -f ~/.aliases ]; then
 #   . ~/.aliases
 # fi
+
+# Besides original aliases, this file also contains dynamic aliases (shell +
+# aliases). I might move dynamic aliases to another file in future.
+
+# enable color support
+if [ -x /usr/bin/dircolors ]; then
+    eval "`dircolors -b`"
+    alias ls='ls --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
 
 alias ll='ls -l'
 alias la='ls -A'
