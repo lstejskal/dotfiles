@@ -65,9 +65,9 @@ alias br='bundle exec rake'
 
 # TODO detect rails2/3 and generate console/server command accordingly
 alias rc='be script/console'
-alias rs='be script/ server'
-alias rc3='rails console'
-alias rs3='rails server'
+alias rs='be script/server'
+alias rc3='bundle exec rails console'
+alias rs3='bundle exec rails server'
 
 # aptitude
 # TODO find installed package by name
