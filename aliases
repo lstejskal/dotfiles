@@ -32,9 +32,6 @@ alias rx='unrar x'
 alias unrar_all='find . -name "*.rar" -exec unrar x '{}' \;'
 alias unrar_all_part='find . -name "*.part1.rar" -exec unrar x '{}' \;'
 
-# edit aliases and load them right afterwards
-alias vialias='vi ~/.aliases; . ~/.aliases'
-
 # git aliases. also see .gitconfig
 alias g='git'
 alias gs='git status'
