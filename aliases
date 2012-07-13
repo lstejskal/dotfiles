@@ -34,15 +34,14 @@ alias unrar_all_part='find . -name "*.part1.rar" -exec unrar x '{}' \;'
 
 # git aliases. also see .gitconfig
 alias g='git'
+alias gl='git log --oneline 20'
 alias gs='git status'
-alias gd='git diff'
-alias gdw='git diff -w'
+alias gd='git diff -w'
 alias gb='git branch'
-alias gl='git pull'
-alias gp='git push'
-alias gc='git commit'
-alias gca='git commit -a'
-alias gco='git checkout'
+alias gm='git commit -m'
+alias gma='git commit -a'
+# IMHO kinda dangerous
+# alias gc='git checkout'
 
 alias gp='git pull origin'
 alias GP='git push origin'
@@ -50,7 +49,6 @@ alias gpm='git pull origin master'
 alias GPM='git push origin master'
 alias gpd='git pull origin deploy'
 alias GPD='git push origin deploy'
-# TODO shortcuts for git reset command
 
 alias curl_post='curl -d "" '
 
