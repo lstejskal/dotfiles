@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+
+# use -h or --help parameter to write basic usage info
+if ARGV.nil? || ARGV.empty? || ['-h', '--help'].include?(ARGV.first)
+puts <<DOC
+
+Targz - creates tar.gz archive of a directory.
+Name is based on directory name. 
+Program will cd into directory before packing,
+because otherwise the path would be saved too.
+
+Example:
+targz /home/me/downloads/articles ->
+tar -zcvf articles.tar.gz /home/me/downloads/articles
+
+Command-line params:
+-h|--help   - prints basic usage info
+
+DOC
+
+exit
+end
+
+dirpath = ARGV.first
+
+unless File.exists?(dirpath)
+  puts "ERROR: Directory [%s] does not exists!" % dirpath
+  exit
+end
+
+dir_parts = dirpath.split('/')
+dirname = dir_parts.pop
+parent_dir = dir_parts.empty? ? nil : dir_parts.join('/')
+
+# switch to parent dir before tar.gz, otherwise path to dir will be archived as well
+Dir.chdir(parent_dir) if parent_dir
+puts 'tar -zcvf %s.tar.gz %s' % [dirname, dirpath]
+system 'tar -zcvf %s.tar.gz %s' % [dirname, dirpath]
